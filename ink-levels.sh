@@ -3,7 +3,7 @@
 PRINTER_IP="192.168.1.194"
 logfile="$HOME/logs/ink-levels.log"
 
-if [[ ! -d "$HOME/logs"
+if [[ ! -d "$HOME/logs" ]]; then 
   echo "Creating dir for log file..." 
   mkdir -vp "$HOME/logs"
 else 
