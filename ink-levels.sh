@@ -3,6 +3,13 @@
 PRINTER_IP="192.168.1.194"
 logfile="$HOME/logs/ink-levels.log"
 
+if [[ ! -d "$HOME/logs"
+  echo "Creating dir for log file..." 
+  mkdir -vp "$HOME/logs"
+else 
+  echo "Log dir exists. Proceeding..." 
+fi
+
 echo "[Querying printer… please wait]"
 
 # Parallel SNMP queries (FAST)
